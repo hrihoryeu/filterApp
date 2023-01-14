@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import {AppContextProps, ContactProps} from '../../../types'
 import { AppContext } from '../../context/app.context'
 
