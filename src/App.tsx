@@ -1,25 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { AppLayout } from './layout/AppLayout';
+import { FilterBar } from './components/FilterBar/FilterBar';
+import { ContactsList } from './components/ContactsList/ContactsList';
+import { AppContextProvider } from './context/app.context';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContextProvider>
+      <AppLayout>
+        <FilterBar>filter</FilterBar>
+        <ContactsList/>
+      </AppLayout>
+    </AppContextProvider>
+    
   );
 }
 
